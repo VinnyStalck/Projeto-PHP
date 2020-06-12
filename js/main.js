@@ -1,240 +1,256 @@
-/*-----------------------------------------------------------------------------------
-/*
-/* Main JS
-/*
------------------------------------------------------------------------------------*/  
+/* ===================================================================
+ * Dazzle - Main JS
+ *
+ * ------------------------------------------------------------------- */ 
 
 (function($) {
 
-	/*---------------------------------------------------- */
-	/* Preloader
-	------------------------------------------------------ */ 
-  	$(window).load(function() {
+	"use strict";
 
-   	// will first fade out the loading animation 
-    	$("#status").fadeOut("slow"); 
+	var cfg = {		
+		scrollDuration : 800, // smoothscroll duration
+		mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc' // mailchimp url
+	},	
 
-    	// will fade out the whole DIV that covers the website. 
-    	$("#preloader").delay(500).fadeOut("slow").remove();      
+	$WIN = $(window);	
 
-  	}) 
+   // Add the User Agent to the <html>
+   // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
 
-  	/*----------------------------------------------------*/
-  	/* Backstretch
-  	/*----------------------------------------------------*/
+	
+	/* Preloader 
+	 * -------------------------------------------------- */
+	var ssPreloader = function() {
 
-  	if($("html").hasClass('ie8')) {
-  		$("#hero").backstretch("images/hero-bg.jpg");  	
-  		$("#page-title").backstretch("images/hero-bg.jpg");	
-  	} 
+		$WIN.on('load', function() {	
 
-   /*----------------------------------------------------*/
-  	/* FitText Settings
-  	------------------------------------------------------ */
-  	setTimeout(function() {
+			// force page scroll position to top at page refresh
+			$('html, body').animate({ scrollTop: 0 }, 'normal');
 
-   	$('#page-title h1').fitText(1, { minFontSize: '38px', maxFontSize: '54px' });
-
-  	}, 100);
-
-
-	/*----------------------------------------------------*/
-	/* Adjust Primary Navigation Background Opacity
-	------------------------------------------------------*/
-   $(window).on('scroll', function() {
-
-		var h = $('header').height();
-		var y = $(window).scrollTop();
-      var header = $('#main-header');
-
-	   if ((y > h + 30 ) && ($(window).outerWidth() > 768 ) ) {
-	      header.addClass('opaque');
-	   }
-      else {
-         if (y < h + 30) {
-            header.removeClass('opaque');
-         }
-         else {
-            header.addClass('opaque');
-         }
-      }
-
-	});
-
-   /*-----------------------------------------------------*/
-	/* Alert Boxes
-  	-------------------------------------------------------*/
-	$('.alert-box').on('click', '.close', function() {
-	  $(this).parent().fadeOut(500);
-	});	
+         // will fade out the whole preloader DIV that covers the website.
+	      $("#preloader").delay(500).fadeOut('slow');
+	  
+	  	});
+	};
 
 
-   /*-----------------------------------------------------*/
-  	/* Mobile Menu
-   ------------------------------------------------------ */  
-   var menu_icon = $("<span class='menu-icon'></span>");
-  	var toggle_button = $("<a>", {                         
-                        id: "toggle-btn", 
-                        html : "<span class='menu-text'>Menu</span>",
-                        title: "Menu",
-                        href : "#" } 
-                        );
-  	var nav_wrap = $('nav#nav-wrap')
-  	var nav = $("ul#nav");  
-   
-   /* if JS is enabled, remove the two a.mobile-btns 
-  	and dynamically prepend a.toggle-btn to #nav-wrap */
-  	nav_wrap.find('a.mobile-btn').remove(); 
-  	toggle_button.append(menu_icon); 
-   nav_wrap.prepend(toggle_button); 
+	/* Mobile Menu
+	 * ---------------------------------------------------- */ 
+	var ssMobileMenu = function() {
 
-  	toggle_button.on("click", function(e) {
-   	e.preventDefault();
-    	nav.slideToggle("fast");     
-  	});
+  		var toggleButton = $('.header-menu-toggle'),
+          nav = $('#header-nav-wrap');
 
-  	if (toggle_button.is(':visible')) nav.addClass('mobile');
-  	$(window).resize(function() {
-   	if (toggle_button.is(':visible')) nav.addClass('mobile');
-    	else nav.removeClass('mobile');
-  	});
+		toggleButton.on('click', function(event){
+			event.preventDefault();
 
-  	$('ul#nav li a').on("click", function() {      
-   	if (nav.hasClass('mobile')) nav.fadeOut('fast');      
-  	});
+			toggleButton.toggleClass('is-clicked');
+			nav.slideToggle();
+		});
+
+		if (toggleButton.is(':visible')) nav.addClass('mobile');
+
+		$(window).resize(function() {
+			if (toggleButton.is(':visible')) nav.addClass('mobile');
+			else nav.removeClass('mobile');
+		});
+
+		$('#header-nav-wrap').find('a').on("click", function() {  
+
+			if (nav.hasClass('mobile')) {   		
+				toggleButton.toggleClass('is-clicked'); 
+				nav.slideToggle();   		
+			}     
+		});
+
+	}; 
 
 
-  	/*----------------------------------------------------*/
-  	/* Smooth Scrolling
-  	------------------------------------------------------ */
-  	$('.smoothscroll').on('click', function (e) {
-	 	
-	 	e.preventDefault();
-
-   	var target = this.hash,
-    	$target = $(target);
-
-    	$('html, body').stop().animate({
-       	'scrollTop': $target.offset().top
-      }, 800, 'swing', function () {
-      	window.location.hash = target;
-      });
-
-  	});
+	/* FitVids
+	 * ---------------------------------------------------- */
+	var ssFitVids = function() {
+		$(".fluid-video-wrapper").fitVids();
+	}; 
 
 
-  	/*----------------------------------------------------*/
-  	/* Highlight the current section in the navigation bar
-  	------------------------------------------------------*/
-	var sections = $("section"),
-	navigation_links = $("#nav-wrap a");
 
-	if($("body").hasClass('homepage')) {
+  /* Owl Carousel
+	* ------------------------------------------------------ */
+	var ssOwlCarousel = function() {
+
+		$(".owl-carousel").owlCarousel({	
+	      loop: true,
+  			nav: false,
+			autoHeight: true,
+  			items: 1
+		});
+
+	};  	
+
+
+  /* Highlight the current section in the navigation bar
+	* ------------------------------------------------------ */
+	var ssWaypoints = function() {
+
+		var sections = $("section"),
+		navigation_links = $(".header-main-nav li a");	
 
 		sections.waypoint( {
 
-	      handler: function(event, direction) {
+	       handler: function(direction) {
 
 			   var active_section;
 
-				active_section = $(this);
+				active_section = $('section#' + this.element.id);
+
 				if (direction === "up") active_section = active_section.prev();
 
-				var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
+				var active_link = $('.header-main-nav li a[href="#' + active_section.attr("id") + '"]');			
 
 	         navigation_links.parent().removeClass("current");
 				active_link.parent().addClass("current");
 
-			},
+			}, 
+
 			offset: '25%'
+
+		});
+	};
+
+
+  /* Smooth Scrolling
+	* ------------------------------------------------------ */
+	var ssSmoothScroll = function() {
+
+		$('.smoothscroll').on('click', function (e) {
+			var target = this.hash,
+			$target    = $(target);
+	 	
+		 	e.preventDefault();
+		 	e.stopPropagation();	  
+
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, cfg.scrollDuration, 'swing', function () {
+				window.location.hash = target;
+			});
+
+	  	});
+
+	};
+
+
+
+  /* Placeholder Plugin Settings
+	* ------------------------------------------------------ */
+	var ssPlaceholder = function() {
+		$('input, textarea, select').placeholder();  
+	};
+
+
+
+  	/* Alert Boxes
+  	------------------------------------------------------- */
+  	var ssAlertBoxes = function() {
+
+  		$('.alert-box').on('click', '.close', function() {
+		  $(this).parent().fadeOut(500);
+		}); 
+
+  	};	  	
+	
+
+
+  /* Animate On Scroll
+  	* ------------------------------------------------------ */
+	var ssAOS = function() {
+
+		AOS.init( {
+      	offset: 200,
+      	duration: 600,
+      	easing: 'ease-in-sine',
+      	delay: 300,
+			once: true,
+			disable: 'mobile'
+    	});
+
+	};
+
+
+  /* AjaxChimp
+	* ------------------------------------------------------ */
+	var ssAjaxChimp = function() {
+
+		$('#mc-form').ajaxChimp({
+			language: 'es',
+		   url: cfg.mailChimpURL
 		});
 
-	}
+		// Mailchimp translation
+		//
+		//  Defaults:
+		//	 'submit': 'Submitting...',
+		//  0: 'We have sent you a confirmation email',
+		//  1: 'Please enter a value',
+		//  2: 'An email address must contain a single @',
+		//  3: 'The domain portion of the email address is invalid (the portion after the @: )',
+		//  4: 'The username portion of the email address is invalid (the portion before the @: )',
+		//  5: 'This email address looks fake or invalid. Please enter a real email address'
 
-   /*----------------------------------------------------*/
-  	/* Flexslider
-  	/*----------------------------------------------------*/
-  	$(window).load(function() {  		
+		$.ajaxChimp.translations.es = {
+		  'submit': 'Submitting...',
+		  0: '<i class="fa fa-check"></i> We have sent you a confirmation email',
+		  1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
+		  2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
+		  3: '<i class="fa fa-warning"></i> E-mail address is not valid.',
+		  4: '<i class="fa fa-warning"></i> E-mail address is not valid.',
+		  5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
+		} 
 
-	  	$('#hero-slider').flexslider({
-	   	namespace: "flex-",
-	      controlsContainer: ".flex-container",
-	      animation: 'fade',
-	      controlNav: true,
-	      directionNav: false,
-	      smoothHeight: true,
-	      slideshowSpeed: 7000,
-	      animationSpeed: 600,
-	      randomize: false
-	   });	   
+	};
 
-   });
 
  
-	/*----------------------------------------------------*/
-	/*	contact form
-	------------------------------------------------------*/
+  /* Back to Top
+	* ------------------------------------------------------ */
+	var ssBackToTop = function() {
 
-   $('form#contactForm button.submit').on('click', function() {
+		var pxShow  = 500,         // height on which the button will show
+		fadeInTime  = 400,         // how slow/fast you want the button to show
+		fadeOutTime = 400,         // how slow/fast you want the button to hide
+		scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+		goTopButton = $("#go-top")
 
-      $('#image-loader').fadeIn();
+		// Show or hide the sticky footer button
+		$(window).on('scroll', function() {
+			if ($(window).scrollTop() >= pxShow) {
+				goTopButton.fadeIn(fadeInTime);
+			} else {
+				goTopButton.fadeOut(fadeOutTime);
+			}
+		});
+	};	
 
-      var contactFname = $('#contactForm #contactFname').val();
-      var contactLname = $('#contactForm #contactLname').val();
-      var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
-      var contactMessage = $('#contactForm #contactMessage').val();
+  
+  /* Initialize
+	* ------------------------------------------------------ */
+	(function ssInit() {
 
-      var data = 'contactFname=' + contactFname  + '&contactLname=' + contactLname + 
-                 '&contactEmail=' + contactEmail + '&contactSubject=' + contactSubject + 
-                 '&contactMessage=' + contactMessage;
+		ssPreloader();
+		ssMobileMenu();
+		ssFitVids();
+		ssOwlCarousel();
+		ssWaypoints();
+		ssSmoothScroll();
+		ssPlaceholder();
+		ssAlertBoxes();
+		ssAOS();		
+		ssAjaxChimp();
+		ssBackToTop();
 
-      $.ajax({
-
-	      type: "POST",
-	      url: "inc/sendEmail.php",
-	      data: data,
-	      success: function(msg) {
-
-            // Message was sent
-            if (msg == 'OK') {
-               $('#image-loader').fadeOut();
-               $('#message-warning').hide();
-               $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
-               $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
-            }
-
-	      }
-
-      });
-      return false;
-   });
-
-
-	/*-----------------------------------------------------*/
-  	/* Back to top
-   ------------------------------------------------------ */ 
-	var pxShow = 300; // height on which the button will show
-	var fadeInTime = 400; // how slow/fast you want the button to show
-	var fadeOutTime = 400; // how slow/fast you want the button to hide
-	var scrollSpeed = 300; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-
-   // Show or hide the sticky footer button
-	jQuery(window).scroll(function() {
-
-		if (jQuery(window).scrollTop() >= pxShow) {
-			jQuery("#go-top").fadeIn(fadeInTime);
-		} else {
-			jQuery("#go-top").fadeOut(fadeOutTime);
-		}
-
-	}); 
-
+	})();
+ 
 
 })(jQuery);
