@@ -15,11 +15,11 @@
 
 			<?php
 			if (isset($_SESSION['userid'])) {
-				echo '<a href="includes/sair.inc.php" title="Logout" class="button button-primary cta">Sair</a>';
+				echo '<a href="includes/sair.inc.php" title="Logout" class="button cta">Sair</a>';
 			} else {
 				echo '
 					<a href="entrar.php" title="Login" class="button button-primary cta">Entrar</a>
-					<a href="cadastro.php" title="Sign-up" class="button button-primary cta">Inscreva-se</a>
+					<a href="cadastro.php" title="Sign-up" class="button cta">Inscreva-se</a>
 				';
 			}
 			?>

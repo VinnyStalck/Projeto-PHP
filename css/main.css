@@ -83,7 +83,7 @@ body {
 
 a,
 a:visited {
-  color: #0087cc;
+  color: #3600cc;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -882,7 +882,7 @@ input::-moz-focus-inner {
 
 .ss-info {
   background-color: #d7ecfb;
-  color: #4a95cc;
+  color: #6235cc;
 }
 
 .ss-notice {

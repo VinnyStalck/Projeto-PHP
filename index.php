@@ -12,6 +12,9 @@
 			case 'entrada':
 				echo  "<script>alert('Você está logado agora!');</script>";
 				break;
+			case 'saida':
+				echo  "<script>alert('Você não está mais logado!');</script>";
+				break;
 			default:
 				break;
 		}
