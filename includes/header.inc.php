@@ -15,7 +15,7 @@
 
 			<?php
 			if (isset($_SESSION['userid'])) {
-				echo '<a href="sair.inc.php" title="Logout" class="button button-primary cta">Sair</a>';
+				echo '<a href="includes/sair.inc.php" title="Logout" class="button button-primary cta">Sair</a>';
 			} else {
 				echo '
 					<a href="entrar.php" title="Login" class="button button-primary cta">Entrar</a>
