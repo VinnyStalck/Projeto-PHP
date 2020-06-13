@@ -16,6 +16,17 @@
 			<h1>Login</h1>
 
 			<?php
+			if (isset($_GET['sucesso'])) {
+				switch ($_GET['sucesso']) {
+					case 'cadastro':
+						echo  '<p class="sucesso">Inscrição feita com sucesso</p>';
+						echo  '<p class="sucesso">Agora você pode entrar na sua conta</p>';
+						break;
+					default:
+						break;
+				}
+			}
+
 			if (isset($_GET['erro'])) {
 				switch ($_GET['erro']) {
 					case 'campovazio':

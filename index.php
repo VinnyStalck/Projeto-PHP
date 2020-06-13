@@ -6,6 +6,17 @@
 </head>
 
 <body id="top">
+	<?php
+	if (isset($_GET['sucesso'])) {
+		switch ($_GET['sucesso']) {
+			case 'entrada':
+				echo  "<script>alert('Você está logado agora!');</script>";
+				break;
+			default:
+				break;
+		}
+	}
+	?>
 
 	<!-- header  -->
 	<?php include "includes/header.inc.php"; ?>

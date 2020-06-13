@@ -63,7 +63,7 @@ if (isset($_POST['envia-cadastro'])) {
 					mysqli_stmt_bind_param($stmt, "sss", $username, $email, $senhaEncriptada);
 					mysqli_stmt_execute($stmt);
 
-					header("Location: ../index.php?sucesso=cadastro");
+					header("Location: ../entrar.php?sucesso=cadastro");
 					exit();
 				}
 			}
