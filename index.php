@@ -1,14 +1,8 @@
-<?php include("includes/config.php"); ?>
-
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<?php require "includes/config.inc.php"; ?>
 
 <head>
-	<?php include("includes/head.php"); ?>
+	<?php require "includes/head.inc.php"; ?>
 </head>
 
 <body id="top">
@@ -29,7 +23,9 @@
 				<li><a class="smoothscroll" href="#download" title="download">Download</a></li>
 			</ul>
 
-			<a href="#" title="sign-up" class="button button-primary cta">Inscreva-se</a>
+			<a href="entrar.php" title="Login" class="button button-primary cta">Entrar</a>
+			<a href="cadastro.php" title="Sign-up" class="button button-primary cta">Inscreva-se</a>
+			<a href="sair.inc.php" title="Logout" class="button button-primary cta">Sair</a>
 		</nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
@@ -353,7 +349,7 @@
 	</section> <!-- end pricing -->
 
 
-	<!-- Testimonials Section  -->
+	<!-- Subscribers Section  -->
 	<section id="testimonials">
 
 		<div class="row">
@@ -511,17 +507,11 @@
 						labore et dolore magna aliqua.</p>
 
 					<div class="subscribe-form">
-
 						<form id="mc-form" class="group" novalidate="true">
-
 							<input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-
 							<input type="submit" name="subscribe" value="Send">
-
 							<label for="mc-email" class="subscribe-message"></label>
-
 						</form>
-
 					</div>
 
 				</div> <!-- end footer-subscribe -->
@@ -556,9 +546,7 @@
 	</div>
 
 	<!-- Java Script  -->
-	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<?php include "includes/javascript.inc.php"; ?>
 
 </body>
 

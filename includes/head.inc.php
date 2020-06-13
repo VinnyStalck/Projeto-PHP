@@ -8,17 +8,17 @@
 <?php
 switch ($pagina) {
     case 'Login': ?>
-        <meta name="description" content="" />
-        <meta name="keywords" content="login" />
+        <meta name="description" content="Faça o login no site" />
+        <meta name="keywords" content="hexagon login" />
     <?php break;
     case 'Cadastro': ?>
-        <meta name="description" content="" />
-        <meta name="keywords" content="cadastro" />
+        <meta name="description" content="Se inscreva no nosso aplicativo" />
+        <meta name="keywords" content="hexagon cadastro" />
     <?php break;
 
     default: ?>
         <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="hexagon aplicativo" />
 <?php break;
 }
 ?>
