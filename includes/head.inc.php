@@ -6,26 +6,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <?php
-switch ($pagina) {
-    case 'Login':
-        ?>
-        <meta name="description" content="Faça o login no site" />
-        <meta name="keywords" content="hexagon login" />
-        <?php 
-        break;
-    case 'Cadastro':
-        ?>
-        <meta name="description" content="Se inscreva no nosso aplicativo" />
-        <meta name="keywords" content="hexagon cadastro" />
-        <?php
-        break;
+# Alerta
+function alerta($tipo, String $mensagem) {
+	echo '
+		<div class="alert-box ss-'.$tipo.' hideit">
+			'.$mensagem.'
+			<i class="fa fa-times close"></i>
+		</div>';
+}
 
-    default: 
-        ?>
-        <meta name="description" content="" />
-        <meta name="keywords" content="hexagon aplicativo" />
-        <?php 
-    break;
+switch ($pagina) {
+	case 'Login':
+		?>
+		<meta name="description" content="Faça o login no site" />
+		<meta name="keywords" content="hexagon login" />
+		<?php
+		break;
+	case 'Cadastro':
+		?>
+		<meta name="description" content="Se inscreva no nosso aplicativo" />
+		<meta name="keywords" content="hexagon cadastro" />
+		<?php
+		break;
+
+	default:
+		?>
+		<meta name="description" content="" />
+		<meta name="keywords" content="hexagon aplicativo" />
+		<?php
+		break;
 }
 ?>
 

@@ -25,7 +25,7 @@
 				<p>
 					alguem@email.com <br>
 					Phone: (+55) 12345 6789 <br>
-					Fax: Quem usa faz man?
+					Fax: Quem usa fax man?
 				</p>
 
 			</div> <!-- end footer-contact -->

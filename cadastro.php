@@ -18,38 +18,62 @@
 				if (isset($_GET['erro'])) {
 					switch ($_GET['erro']) {
 						case 'campovazio':
-							echo '<p class="erro">Nenhum campo pode estar vazio!</p>';
+							alerta('error', '<p>Nenhum campo pode estar vazio!</p>');
 							break;
 						case 'usernameemailinvalido':
-							echo '<p class="erro">Nome de Usuário inválido!</p>';
-							echo '<p class="aviso">São permitidos somente Letras minúsculas, maiúsculas e números no nome de usuário.</p>';
-							echo '<p class="erro">Email inválido!</p>';
-							echo '<p class="aviso">Verifique se foi inserido o email corretamente.</p>';
+							alerta(
+								'error',
+								'<p>Nome de Usuário inválido!</p>
+								<p>São permitidos somente Letras minúsculas, maiúsculas e números no nome de usuário.</p>'
+							);
+							alerta(
+								'error',
+								'<p>Email inválido!</p>
+								<p>Verifique se foi inserido o email corretamente.</p>'
+							);
 							break;
 						case 'usernameinvalido':
-							echo '<p class="erro">Nome de Usuário inválido!</p>';
-							echo '<p class="aviso">São permitidos somente Letras minúsculas, maiúsculas e números no nome de usuário</p>';
+							alerta(
+								'error',
+								'<p>Nome de Usuário inválido!</p>
+								<p>São permitidos somente Letras minúsculas, maiúsculas e números no nome de usuário.</p>'
+							);
 							break;
 						case 'emailinvalido':
-							echo '<p class="erro">Email inválido!</p>';
-							echo '<p class="aviso">Verifique se foi inserido o email corretamente.</p>';
+							alerta(
+								'error',
+								'<p>Email inválido!</p>
+								<p>Verifique se foi inserido o email corretamente.</p>'
+							);
 							break;
 						case 'confirmasenha':
-							echo '<p class="erro">As senhas não conferem!</p>';
-							echo '<p class="aviso">Por favor insira a mesma senha.</p>';
+							alerta(
+								'error',
+								'<p>As senhas não conferem!</p>
+								<p>Por favor insira a mesma senha.</p>'
+							);
 							break;
 						case 'usernameutilizado':
-							echo '<p class="erro">O nome de usuário já está sendo utilizado!</p>';
-							echo '<p class="aviso">Por favor insira um nome de usuário único.</p>';
+							alerta(
+								'error',
+								'<p>O nome de usuário já está sendo utilizado!</p>
+								<p>Por favor insira um nome de usuário único.</p>'
+							);
 							break;
 						case 'conexaosql':
-							echo '<p class="erro">Ocorreu um erro na conexão com o banco de dados!</p>';
-							echo '<p>Por favor tente novamente.</p>';
+							alerta(
+								'error',
+								'<p>Ocorreu um erro na conexão com o banco de dados!</p>
+								<p>Por favor tente novamente.</p>'
+							);
 							break;
 						
 						default:
-							echo '<p class="erro">Ocorreu algum erro inesperado!</p>';
-							echo '<p>Por favor tente novamente.</p>';
+							alerta(
+								'error',
+								'<p>Ocorreu algum erro inesperado!</p>
+								<p>Por favor tente novamente.</p>'
+							);
 							break;
 					}
 				}
