@@ -1,9 +1,13 @@
 <?php
 
 switch ($_SERVER["SCRIPT_NAME"]) {
-    case 'portifolio.php':
-        $pagina = "Portifolio";
-        $paginaTitulo = "Portifólio - Hexagon";
+    case 'login.php':
+        $pagina = "Login";
+        $paginaTitulo = "Login - Hexagon";
+        break;
+    case 'cadastro.php':
+        $pagina = "Cadastro";
+        $paginaTitulo = "Cadastro - Hexagon";
         break;
     
     default:
