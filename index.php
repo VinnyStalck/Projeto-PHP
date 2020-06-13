@@ -36,9 +36,9 @@
 					<h3 data-aos="fade-up">Bem-vindo ao Hexagon</h3>
 
 					<h1 data-aos="fade-up">
-						Creative Landing <br>
-						Page to Showcase <br>
-						Your Amazing App.
+						Minimalista,<br>
+						Limpo,<br>
+						Seu
 					</h1>
 
 					<div class="buttons" data-aos="fade-up">
@@ -72,7 +72,7 @@
 				<a href="#"><i class="fa fa-instagram"></i></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-youtube-play"></i></a>
+				<a href="https://youtu.be/dQw4w9WgXcQ"><i class="fa fa-youtube-play"></i></a>
 			</li>
 		</ul>
 		<!-- end home-social-list -->
@@ -114,7 +114,7 @@
 
 					<div class="service-content">
 
-						<h3>Fully Resposive</h3>
+						<h3>Totalmente responsivo</h3>
 
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -131,7 +131,7 @@
 					<span class="icon"><i class="icon-image"></i></span>
 
 					<div class="service-content">
-						<h3>Retina Ready</h3>
+						<h3>Gostoso de Ver</h3>
 
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -149,7 +149,7 @@
 					<span class="icon"><i class="icon-paint-brush"></i></span>
 
 					<div class="service-content">
-						<h3>Stylish Design</h3>
+						<h3>Design Estilizado</h3>
 
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -166,7 +166,7 @@
 					<span class="icon"><i class="icon-file"></i></span>
 
 					<div class="service-content">
-						<h3>Clean Code</h3>
+						<h3>Código Limpo</h3>
 
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -183,7 +183,7 @@
 					<span class="icon"><i class="icon-sliders"></i></span>
 
 					<div class="service-content">
-						<h3>Easy To Customize</h3>
+						<h3>Fácil de Costumizar</h3>
 
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -199,7 +199,7 @@
 					<span class="icon"><i class="icon-gift"></i></span>
 
 					<div class="service-content">
-						<h3>Free of Charge</h3>
+						<h3>Gratuito</h3>
 
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -217,13 +217,13 @@
 
 		<div class="row about-how">
 
-			<h1 class="intro-header" data-aos="fade-up">How The App Works?</h1>
+			<h1 class="intro-header" data-aos="fade-up">Como o aplicativo funciona?</h1>
 
 			<div class="about-how-content" data-aos="fade-up">
 				<div class="about-how-steps block-1-2 block-tab-full group">
 
 					<div class="bgrid step" data-item="1">
-						<h3>Sign-Up</h3>
+						<h3>Inscreva-se</h3>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
 							architecto beatae vitae dicta sunt explicabo.
@@ -231,7 +231,7 @@
 					</div>
 
 					<div class="bgrid step" data-item="2">
-						<h3>Upload</h3>
+						<h3>Envie</h3>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
 							architecto beatae vitae dicta sunt explicabo.
@@ -239,7 +239,7 @@
 					</div>
 
 					<div class="bgrid step" data-item="3">
-						<h3>Create</h3>
+						<h3>Crie</h3>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
 							architecto beatae vitae dicta sunt explicabo.
@@ -247,7 +247,7 @@
 					</div>
 
 					<div class="bgrid step" data-item="4">
-						<h3>Publish</h3>
+						<h3>Publique</h3>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
 							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
 							architecto beatae vitae dicta sunt explicabo.
@@ -290,20 +290,19 @@
 						<div class="plan-block" data-aos="fade-up">
 
 							<div class="plan-top-part">
-								<h3 class="plan-block-title">Lite Plan</h3>
-								<p class="plan-block-price"><sup>$</sup>25</p>
-								<p class="plan-block-per">Per Month</p>
+								<h3 class="plan-block-title">Plano Gratuito</h3>
+								<p class="plan-block-price"><sup>R$</sup>0</p>
+								<p class="plan-block-per">Por Mês</p>
 							</div>
 
 							<div class="plan-bottom-part">
 								<ul class="plan-block-features">
-									<li><span>3GB</span> Storage</li>
-									<li><span>10GB</span> Bandwidth</li>
-									<li><span>5</span> Databases</li>
-									<li><span>30</span> Email Accounts</li>
+									<li><span>3GB</span> de Armazenamento</li>
+									<li><span>12Hrs</span> por Dia</li>
+
 								</ul>
 
-								<a class="button button-primary large" href="">Get Started</a>
+								<a class="button button-primary large" href="#download">Get Started</a>
 							</div>
 
 						</div>
@@ -313,20 +312,18 @@
 						<div class="plan-block primary" data-aos="fade-up">
 
 							<div class="plan-top-part">
-								<h3 class="plan-block-title">Pro Plan</h3>
-								<p class="plan-block-price"><sup>$</sup>50</p>
-								<p class="plan-block-per">Per Month</p>
+								<h3 class="plan-block-title">Plano Pago</h3>
+								<p class="plan-block-price"><sup>R$</sup>30</p>
+								<p class="plan-block-per">Por Mês</p>
 							</div>
 
 							<div class="plan-bottom-part">
 								<ul class="plan-block-features">
-									<li><span>5GB</span> Storage</li>
-									<li><span>20GB</span> Bandwidth</li>
-									<li><span>15</span> Databases</li>
-									<li><span>70</span> Email Accounts</li>
+									<li>Armazenamento <span>Ilimitado</span></li>
+									<li><span>24Hrs</span> por Dia</li>
 								</ul>
 
-								<a class="button button-primary large" href="">Get Started</a>
+								<a class="button button-primary large" href="#download">Get Started</a>
 							</div>
 
 						</div>
@@ -343,7 +340,7 @@
 
 		<div class="row">
 			<div class="col-twelve">
-				<h1 class="intro-header" data-aos="fade-up">What They Say About Our App.</h1>
+				<h1 class="intro-header" data-aos="fade-up">O que dizem do nosso aplicativo.</h1>
 			</div>
 		</div>
 
@@ -355,16 +352,11 @@
 
 					<div>
 						<p>
-							Your work is going to fill a large part of your life, and the only way to be truly satisfied
-							is
-							to do what you believe is great work. And the only way to do great work is to love what you
-							do.
-							If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart,
-							you'll know when you find it.
+							Mó bom. Melhor app que já baixei.
 						</p>
 
 						<div class="testimonial-author">
-							<img src="images/avatars/user-02.jpg" alt="Author image">
+							<img src="images/avatars/user-01.jpg" alt="Author image">
 							<div class="author-info">
 								Steve Jobs
 								<span class="position">CEO, Apple.</span>
@@ -374,16 +366,14 @@
 
 					<div>
 						<p>
-							This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-							Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-							nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+							Ficou legal filho. 👍
 						</p>
 
 						<div class="testimonial-author">
-							<img src="images/avatars/user-03.jpg" alt="Author image">
+							<img src="images/avatars/user-05.jpg" alt="Author image">
 							<div class="author-info">
-								John Doe
-								<span>CEO, ABC Corp.</span>
+								Meu pai
+								<span>Trabalhador</span>
 							</div>
 						</div>
 					</div>

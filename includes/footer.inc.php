@@ -7,11 +7,6 @@
 
 				<div class="footer-logo"></div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta
-					dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-				</p>
-
 				<ul class="footer-social-list">
 					<li> <a href="#"><i class="fa fa-facebook-square"></i></a> </li>
 					<li> <a href="#"><i class="fa fa-twitter"></i></a> </li>
@@ -28,15 +23,9 @@
 				<h4>Contact</h4>
 
 				<p>
-					1600 Amphitheatre Parkway<br>
-					Mountain View, CA <br>
-					94043 US<br>
-				</p>
-
-				<p>
-					someone@dazzlesite.com <br>
-					Phone: (+63) 555 1212 <br>
-					Fax: (+63) 555 0100
+					alguem@email.com <br>
+					Phone: (+55) 12345 6789 <br>
+					Fax: Quem usa faz man?
 				</p>
 
 			</div> <!-- end footer-contact -->
@@ -46,12 +35,7 @@
 				<h4>Site Links</h4>
 
 				<ul class="list-links">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Terms</a></li>
-					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="index.php">Home</a></li>
 				</ul>
 
 			</div> <!-- end footer-site-links -->
@@ -62,14 +46,6 @@
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 					labore et dolore magna aliqua.</p>
-
-				<div class="subscribe-form">
-					<form id="mc-form" class="group" novalidate="true">
-						<input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-						<input type="submit" name="subscribe" value="Send">
-						<label for="mc-email" class="subscribe-message"></label>
-					</form>
-				</div>
 
 			</div> <!-- end footer-subscribe -->
 

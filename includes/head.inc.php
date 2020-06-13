@@ -7,19 +7,25 @@
 
 <?php
 switch ($pagina) {
-    case 'Login': ?>
+    case 'Login':
+        ?>
         <meta name="description" content="Faça o login no site" />
         <meta name="keywords" content="hexagon login" />
-    <?php break;
-    case 'Cadastro': ?>
+        <?php 
+        break;
+    case 'Cadastro':
+        ?>
         <meta name="description" content="Se inscreva no nosso aplicativo" />
         <meta name="keywords" content="hexagon cadastro" />
-    <?php break;
+        <?php
+        break;
 
-    default: ?>
+    default: 
+        ?>
         <meta name="description" content="" />
         <meta name="keywords" content="hexagon aplicativo" />
-<?php break;
+        <?php 
+    break;
 }
 ?>
 
