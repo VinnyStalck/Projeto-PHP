@@ -27,6 +27,7 @@ switch ($pagina) {
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/vendor.css">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/extra.css">
 
 <!-- Script -->
 <script src="js/modernizr.js"></script>

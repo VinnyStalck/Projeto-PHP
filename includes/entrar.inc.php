@@ -10,14 +10,14 @@ if (isset($_POST['envia-entrada'])) {
 
 	# Verifica campos vazios
 	if (empty($user) || empty($senha)) {
-		header("Location: ../entrar.php?error=campovazio&username=" . $user);
+		header("Location: ../entrar.php?erro=campovazio&username=" . $user);
 		exit();
 	} else {
 		# 
 		$sql = "SELECT * FROM inscricoes WHERE username=? OR email=?;";
 		$stmt = mysqli_stmt_init($conexao);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
-			header("Location: ../entrar.php?error=conexaosql");
+			header("Location: ../entrar.php?erro=conexaosql");
 			exit();
 		} else {
 			mysqli_stmt_bind_param($stmt, "ss", $user, $user);
@@ -26,7 +26,7 @@ if (isset($_POST['envia-entrada'])) {
 			if ($row = mysqli_fetch_assoc($resultado)) {
 				$checarSenha = password_verify($senha, $row['senha']);
 				if ($checarSenha == false) {
-					header("Location: ../entrar.php?error=senhaincorreta");
+					header("Location: ../entrar.php?erro=senhaincorreta");
 					exit();
 				} elseif ($checarSenha == true) {
 					# Inicia sessão
@@ -34,14 +34,14 @@ if (isset($_POST['envia-entrada'])) {
 					$_SESSION["userid"] = $row['id'];
 					$_SESSION["username"] = $row['username'];
 
-					header("Location: ../index.php?entrada=sucesso");
+					header("Location: ../index.php?sucesso=entrada");
 					exit();
 				} else {
-					header("Location: ../entrar.php?error=senhaincorreta");
+					header("Location: ../entrar.php?erro=senhaincorreta");
 					exit();
 				}
 			} else {
-				header("Location: ../entrar.php?error=usuarioinexistente");
+				header("Location: ../entrar.php?erro=usuarioinexistente");
 				exit();
 			}
 		}
