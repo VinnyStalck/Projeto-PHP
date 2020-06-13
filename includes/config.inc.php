@@ -3,6 +3,9 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="pt-br"><!--<![endif]-->
 
 <?php
+# Iniciar Sessão
+session_start();
+
 switch ($_SERVER["SCRIPT_NAME"]) {
 	case 'entrar.php':
 		$pagina = "Login";

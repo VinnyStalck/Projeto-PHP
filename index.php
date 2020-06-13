@@ -72,7 +72,6 @@
 
 	</section> <!-- end home -->
 
-
 	<!-- about  -->
 	<section id="about">
 
@@ -256,7 +255,6 @@
 
 	</section> <!-- end about -->
 
-
 	<!-- pricing  -->
 	<section id="pricing">
 		<div class="row pricing-content">
@@ -326,7 +324,6 @@
 		</div> <!-- end pricing-content -->
 	</section> <!-- end pricing -->
 
-
 	<!-- Subscribers Section  -->
 	<section id="testimonials">
 
@@ -385,7 +382,6 @@
 
 	</section> <!-- end testimonials -->
 
-
 	<!-- download  -->
 	<section id="download">
 
@@ -406,7 +402,6 @@
 		</div>
 
 	</section> <!-- end download -->
-
 
 	<!-- footer  -->
 	<?php include "includes/footer.inc.php"; ?>
