@@ -8,29 +8,7 @@
 <body id="top">
 
 	<!-- header  -->
-	<header id="header" class="row">
-
-		<div class="header-logo">
-			<a href="index.php">Hexagon</a>
-		</div>
-
-		<nav id="header-nav-wrap">
-			<ul class="header-main-nav">
-				<li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-				<li><a class="smoothscroll" href="#about" title="about">Sobre</a></li>
-				<li><a class="smoothscroll" href="#pricing" title="pricing">Preços</a></li>
-				<li><a class="smoothscroll" href="#testimonials" title="testimonials">Inscrições</a></li>
-				<li><a class="smoothscroll" href="#download" title="download">Download</a></li>
-			</ul>
-
-			<a href="entrar.php" title="Login" class="button button-primary cta">Entrar</a>
-			<a href="cadastro.php" title="Sign-up" class="button button-primary cta">Inscreva-se</a>
-			<a href="sair.inc.php" title="Logout" class="button button-primary cta">Sair</a>
-		</nav>
-
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
-
-	</header> <!-- /header -->
+	<?php include "includes/header.inc.php"; ?>
 
 	<!-- home  -->
 	<section id="home" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=1620 data-natural-height=1080>
@@ -431,115 +409,7 @@
 
 
 	<!-- footer  -->
-	<footer>
-
-		<div class="footer-main">
-			<div class="row">
-
-				<div class="col-three md-1-3 tab-full footer-info">
-
-					<div class="footer-logo"></div>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta
-						dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-					</p>
-
-					<ul class="footer-social-list">
-						<li>
-							<a href="#"><i class="fa fa-facebook-square"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fa fa-instagram"></i></a>
-						</li>
-					</ul>
-
-
-				</div> <!-- end footer-info -->
-
-				<div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
-
-					<h4>Contact</h4>
-
-					<p>
-						1600 Amphitheatre Parkway<br>
-						Mountain View, CA <br>
-						94043 US<br>
-					</p>
-
-					<p>
-						someone@dazzlesite.com <br>
-						Phone: (+63) 555 1212 <br>
-						Fax: (+63) 555 0100
-					</p>
-
-				</div> <!-- end footer-contact -->
-
-				<div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
-
-					<h4>Site Links</h4>
-
-					<ul class="list-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Terms</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-					</ul>
-
-				</div> <!-- end footer-site-links -->
-
-				<div class="col-four md-1-2 tab-full footer-subscribe">
-
-					<h4>Our Newsletter</h4>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua.</p>
-
-					<div class="subscribe-form">
-						<form id="mc-form" class="group" novalidate="true">
-							<input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-							<input type="submit" name="subscribe" value="Send">
-							<label for="mc-email" class="subscribe-message"></label>
-						</form>
-					</div>
-
-				</div> <!-- end footer-subscribe -->
-
-			</div> <!-- /row -->
-		</div> <!-- end footer-main -->
-
-
-		<div class="footer-bottom">
-
-			<div class="row">
-
-				<div class="col-twelve">
-					<div class="copyright">
-						<span>© Copyright Dazzle 2017.</span>
-						<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
-					</div>
-
-					<div id="go-top">
-						<a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
-					</div>
-				</div>
-
-			</div> <!-- end footer-bottom -->
-
-		</div>
-
-	</footer>
+	<?php include "includes/footer.inc.php"; ?>
 
 	<div id="preloader">
 		<div id="loader"></div>
